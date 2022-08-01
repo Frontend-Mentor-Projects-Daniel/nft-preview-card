@@ -1,0 +1,130 @@
+/**----------------------
+*         RESET 
+-----------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+/* set up the body */
+body {
+  font-family: var(--ff-sans-normal);
+  font-size: var(--fs-400);
+  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-dark));
+  line-height: 1.5;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+}
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/**----------------------
+*      CUSTOM PROPS 
+-----------------------*/
+:root {
+  /* colours */
+  --clr-soft-blue: hsl(215, 51%, 70%);
+  --clr-cyan: hsl(178, 100%, 50%);
+
+  --clr-main-bg: hsl(217, 54%, 11%);
+  --clr-card-bg: hsl(216, 50%, 16%);
+  --clr-line: hsl(215, 32%, 27%);
+
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* font family */
+  --ff-outfit: 'Outfit', sans-serif;
+
+  /* font size */
+  --fs-default: 1.125rem;
+
+  /* font weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-semibold: 600;
+
+  /* breakpoints */
+  --bp-sm: 23.4375em;
+  --bp-md: 48em;
+  --bp-lg: 90em;
+}
+
+/**----------------------
+*       GENERAL
+-----------------------*/
+body {
+  font-family: var(--ff-outfit);
+  font-size: var(--fs-default);
+  font-weight: var(--fw-regular);
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+/**----------------------
+*   NFT-CARD COMPONENT
+-----------------------*/
+.nft-card {
+  width: var(--bp-sm);
+}
+
+/* top image */
+
+/* content */
+
+/* user */
