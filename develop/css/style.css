@@ -39,6 +39,7 @@ body {
   line-height: 1.5;
   min-height: 100vh;
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr;
   grid-template-rows: min-content 1fr;
 }
 /* make images easier to work with */
@@ -59,7 +60,9 @@ select {
   *,
   *::before,
   *::after {
+    -webkit-animation-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
@@ -124,18 +127,12 @@ body {
   display: none !important;
 }
 
-.mb-1 {
-  margin-bottom: 1rem;
+.mb--1 {
+  margin-bottom: 1rem !important;
 }
-.mb-2 {
-  margin-bottom: 2rem;
+.mb--2 {
+  margin-bottom: 2rem !important;
 }
-
-/* TODO: Don't forget to use the auto pre-fixer */
-/* FIXME: 
-Fix spacing's and make mb-1 to mb--1 
-Nothing on the page is focus-able
-*/
 
 /**----------------------
 *   NFT-CARD COMPONENT
@@ -192,6 +189,7 @@ Nothing on the page is focus-able
   display: inline-block;
   font-size: 24px;
   font-weight: var(--fw-semibold);
+  margin-bottom: 1rem;
 }
 
 .nft-card__title:hover {
@@ -200,6 +198,7 @@ Nothing on the page is focus-able
 
 .nft-card__text {
   color: hsl(var(--clr-white), 0.5);
+  margin-bottom: 1rem;
 }
 
 /* price and time */
@@ -218,6 +217,7 @@ Nothing on the page is focus-able
 
 .nft-card__ethereum-time {
   color: hsl(var(--clr-white), 0.5);
+  margin-bottom: 1rem;
 }
 
 .nft-card__ethereum-clock {
