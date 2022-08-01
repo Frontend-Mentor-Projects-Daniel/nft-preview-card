@@ -117,6 +117,21 @@ body {
 }
 
 /**----------------------
+*       SUDO CODE
+-----------------------*/
+/* card should be the same size on all screen sizes */
+/* card should have a lighter shade than the body */
+/* card should have an equal amount of padding on all sides */
+/* image and card have rounded borders */
+/* both images should be background images, where one appears on hover and perhaps a third background image of the cyan colour */
+/* title should be slightly larger than body text and a heavier weight and should have the cyan colour on hover */
+/* body text should have a grey colour to it */
+/* the ethereum amount and time should simply be controlled by flex and given space-between each other, maybe another flexbox for space between the icons and text (or just some margin) */
+/* add a border bottom to content div with the darkest grey on this component */
+/* use flexbox to layout the user avatar with the text and limit the width of the container or just use span elements and margin */
+/* name should change to colour cyan on hover */
+
+/**----------------------
 *   NFT-CARD COMPONENT
 -----------------------*/
 .nft-card {
@@ -124,7 +139,46 @@ body {
 }
 
 /* top image */
+.nft-card__image {
+}
+
+.nft-card__image img {
+}
 
 /* content */
+.nft-card__content {
+}
+
+.nft-card__title {
+}
+
+.nft-card__text {
+}
+
+.nft-card__price {
+}
+
+.nft-card__ethereum-icon {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+}
+
+.nft-card__ethereum-icon img {
+}
+
+.nft-card__ethereum-amount {
+}
+
+.nft-card__ethereum-time {
+}
 
 /* user */
+.nft-card__user {
+}
+
+.nft-card__user-image {
+}
+
+.nft-card__user-name {
+}
