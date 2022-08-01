@@ -12,6 +12,17 @@
       href="./develop/images/favicon-32x32.png"
     />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./develop/css/style.css" />
+
     <title>Frontend Mentor | NFT preview card component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -26,8 +37,46 @@
     </style>
   </head>
   <body>
-    Equilibrium #3429 Our Equilibrium collection promotes balance and calm.
-    0.041 ETH 3 days left Creation of Jules Wyvern
+    <main class="main">
+      <div class="nft-card">
+        <!-- image -->
+        <div class="nft-card__image">
+          <img
+            src="./develop/images/image-equilibrium.jpg"
+            alt="Image of a techno cube"
+          />
+        </div>
+
+        <!-- content -->
+        <div class="nft-card__content">
+          <h1 class="nft-card__title">Equilibrium #3492</h1>
+          <p class="nft-card__text">
+            Our Equilibrium collection promotes balance and calm.
+          </p>
+          <div class="nft-card__price">
+            <span>
+              <img
+                src="./develop/images/icon-ethereum.svg"
+                alt="ethereum icon"
+              />
+            </span>
+            <span> 0.041 ETH </span>
+            <span>3 days left</span>
+          </div>
+
+          <!-- border -->
+          <div class="bdr-btm--1"></div>
+        </div>
+
+        <!-- user -->
+        <div class="nft-card__user">
+          <div class="nft-card__user-image">
+            <img src="./develop/images/image-avatar.png" alt="user avatar" />
+          </div>
+          <span class="nft-card__user-name">Creation of Jules Wyvern</span>
+        </div>
+      </div>
+    </main>
 
     <div class="attribution">
       Challenge by
