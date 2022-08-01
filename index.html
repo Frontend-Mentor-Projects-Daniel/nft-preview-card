@@ -40,7 +40,7 @@
     <main class="main">
       <div class="nft-card">
         <!-- image -->
-        <div class="nft-card__image">
+        <div class="nft-card__image mb-2">
           <img src="./develop/images/image-equilibrium.jpg" alt="A techno cube">
           <div class="overlay--cyan">
             <img src="./develop/images/icon-view.svg" alt="view icon">
@@ -48,32 +48,35 @@
         </div>
 
         <!-- content -->
-        <div class="nft-card__content">
-          <h1 class="nft-card__title">Equilibrium #3492</h1>
-          <p class="nft-card__text">
+        <div class="nft-card__content mb-1">
+          <h1 class="nft-card__title mb-1">Equilibrium #3492</h1>
+          <p class="nft-card__text mb-1">
             Our Equilibrium collection promotes balance and calm.
           </p>
           <div class="nft-card__price">
-            <span class="nft-card__ethereum-icon">
+            <span class="nft-card__ethereum-amount"> 
               <img
-                src="./develop/images/icon-ethereum.svg"
-                alt="ethereum icon"
-              />
-            </span>
-            <span class="nft-card__ethereum-amount"> 0.041 ETH </span>
-            <span class="nft-card__ethereum-time">
-              <img src="./develop/images/icon-clock.svg" alt="clock icon" />
+              class="nft-card__ethereum-icon"
+              src="./develop/images/icon-ethereum.svg"
+              alt="ethereum icon"
+            />
+              0.041 ETH </span>
+            <span class="nft-card__ethereum-time mb-2">
+              <img 
+              class="nft-card__ethereum-clock"
+              src="./develop/images/icon-clock.svg" alt="clock icon" />
               3 days left</span
             >
           </div>
+        </div>
+        
         <!-- user -->
         <div class="nft-card__user">
           <span class="nft-card__user-image">
             <img src="./develop/images/image-avatar.png" alt="user avatar" />
           </span>
-          <span class="nft-card__user-name">Creation of Jules Wyvern</span>
+          <span class="nft-card__user-name">Creation of <span>Jules Wyvern</span></span>
         </div>
-      </div>
     </main>
 
     <!-- attribution -->

@@ -112,6 +112,7 @@ body {
   flex-direction: column;
   justify-content: center;
 
+  background-color: hsl(var(--clr-main-bg));
   height: 100vh;
   width: 100vw;
 }
@@ -120,30 +121,30 @@ body {
 *       UTILITIES
 -----------------------*/
 .hidden {
-  display: none;
+  display: none !important;
 }
 
-/**----------------------
-*       SUDO CODE
------------------------*/
-/* card should be the same size on all screen sizes */
-/* card should have a lighter shade than the body */
-/* card should have an equal amount of padding on all sides */
-/* image and card have rounded borders */
-/* both images should be background images, where one appears on hover and perhaps a third background image of the cyan colour */
-/* title should be slightly larger than body text and a heavier weight and should have the cyan colour on hover */
-/* body text should have a grey colour to it */
-/* the ethereum amount and time should simply be controlled by flex and given space-between each other, maybe another flexbox for space between the icons and text (or just some margin) */
-/* add a border bottom to content div with the darkest grey on this component */
-/* use flexbox to layout the user avatar with the text and limit the width of the container or just use span elements and margin */
-/* name should change to colour cyan on hover */
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+/* TODO: Don't forget to use the auto pre-fixer */
+/* FIXME: 
+Fix spacing's and make mb-1 to mb--1 
+Nothing on the page is focus-able
+*/
 
 /**----------------------
 *   NFT-CARD COMPONENT
 -----------------------*/
 .nft-card {
-  background-color: black;
-  /* width: var(--bp-sm); */
+  background-color: hsl(var(--clr-card-bg));
+  border-radius: 0.9375rem;
+  overflow: hidden;
+  padding: 1.25rem;
   width: 21.875rem;
 }
 
@@ -151,10 +152,12 @@ body {
 .nft-card__image {
   position: relative;
 
+  cursor: pointer;
   width: 100%;
 }
 
-.nft-card__image > img {
+.nft-card__image > * {
+  border-radius: 10px;
 }
 
 .overlay--cyan {
@@ -181,38 +184,63 @@ body {
 
 /* content */
 .nft-card__content {
+  border-bottom: 2px solid hsl(var(--clr-line));
 }
 
 .nft-card__title {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: var(--fw-semibold);
+}
+
+.nft-card__title:hover {
+  color: hsl(var(--clr-cyan));
 }
 
 .nft-card__text {
+  color: hsl(var(--clr-white), 0.5);
 }
 
+/* price and time */
 .nft-card__price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nft-card__ethereum-amount {
+  color: hsl(var(--clr-cyan));
 }
 
 .nft-card__ethereum-icon {
   display: inline-block;
-  height: 100px;
-  width: 100px;
-}
-
-.nft-card__ethereum-icon img {
-}
-
-.nft-card__ethereum-amount {
 }
 
 .nft-card__ethereum-time {
+  color: hsl(var(--clr-white), 0.5);
+}
+
+.nft-card__ethereum-clock {
+  display: inline-block;
 }
 
 /* user */
 .nft-card__user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 88%;
 }
 
 .nft-card__user-image {
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 3.125rem;
+  width: 3.125rem;
 }
 
-.nft-card__user-name {
+.nft-card__user-name span:hover {
+  color: hsl(var(--clr-cyan));
+  cursor: pointer;
 }
